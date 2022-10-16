@@ -6,6 +6,11 @@ function App() {
         theme = _React$useState2[0],
         setTheme = _React$useState2[1];
 
+    var _React$useState3 = React.useState(React.createElement(Moon, { handleThemeChange: handleThemeChange })),
+        _React$useState4 = _slicedToArray(_React$useState3, 2),
+        icon = _React$useState4[0],
+        setIcon = _React$useState4[1];
+
     var lightTheme = {
         backgroundColor: "white",
         color: "black"
@@ -18,23 +23,20 @@ function App() {
 
     function handleThemeChange() {
         setTheme(!theme);
+        setIcon(theme == lightTheme ? React.createElement(Moon, null) : React.createElement(Sun, null));
     }
 
     return React.createElement(
         "div",
         { className: "page", style: theme ? lightTheme : darkTheme },
-        React.createElement("img", {
-            src: "images/sunP.png",
-            onClick: handleThemeChange,
-            className: "sun"
-        })
+        icon
     );
 }
 
 function Moon(_ref) {
     var handleThemeChange = _ref.handleThemeChange;
 
-    React.createElement("img", {
+    return React.createElement("img", {
         src: "images/moon.png",
         onClick: handleThemeChange,
         className: "moon"
@@ -44,7 +46,7 @@ function Moon(_ref) {
 function Sun(_ref2) {
     var handleThemeChange = _ref2.handleThemeChange;
 
-    React.createElement("img", {
+    return React.createElement("img", {
         src: "images/sunP.png",
         onClick: handleThemeChange,
         className: "sun"

@@ -1,5 +1,6 @@
 function App() {
     const [theme, setTheme] = React.useState(lightTheme);
+    const [icon, setIcon] = React.useState(<Moon handleThemeChange={handleThemeChange} />);
 
     const lightTheme = {
         backgroundColor: "white",
@@ -13,33 +14,34 @@ function App() {
 
     function handleThemeChange() {
         setTheme(!theme);
+        setIcon(theme == lightTheme ? <Moon /> : <Sun />)
     }
 
     return (
         <div className="page" style={theme ? lightTheme : darkTheme}>
-            <img
-                src="images/sunP.png"
-                onClick={handleThemeChange}
-                className="sun"
-            />
+            {icon}
         </div>
     );
 }
 
 function Moon({ handleThemeChange }) {
-    <img
-        src="images/moon.png"
-        onClick={handleThemeChange}
-        className="moon"
-    />
+    return (
+        <img
+            src="images/moon.png"
+            onClick={handleThemeChange}
+            className="moon"
+        />
+    );
 }
 
 function Sun({ handleThemeChange }) {
-    <img
-        src="images/sunP.png"
-        onClick={handleThemeChange}
-        className="sun"
-    />
+    return (
+        <img
+            src="images/sunP.png"
+            onClick={handleThemeChange}
+            className="sun"
+        />
+    );
 }
 
 // react & react DOM stuff
