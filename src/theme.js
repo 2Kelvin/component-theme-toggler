@@ -14,12 +14,12 @@ function App() {
 
     function handleThemeChange() {
         setTheme(!theme);
-        setIcon(theme == lightTheme ? <Moon /> : <Sun />)
+        setIcon(!icon)
     }
 
     return (
         <div className="page" style={theme ? lightTheme : darkTheme}>
-            {icon}
+            {icon ? <Moon handleThemeChange={handleThemeChange} /> : <Sun handleThemeChange={handleThemeChange} />}
         </div>
     );
 }

@@ -23,13 +23,13 @@ function App() {
 
     function handleThemeChange() {
         setTheme(!theme);
-        setIcon(theme == lightTheme ? React.createElement(Moon, null) : React.createElement(Sun, null));
+        setIcon(!icon);
     }
 
     return React.createElement(
         "div",
         { className: "page", style: theme ? lightTheme : darkTheme },
-        icon
+        icon ? React.createElement(Moon, { handleThemeChange: handleThemeChange }) : React.createElement(Sun, { handleThemeChange: handleThemeChange })
     );
 }
 
