@@ -7,7 +7,7 @@ function App() {
     };
 
     const darkTheme = {
-        backgroundColor: "black",
+        backgroundColor: "#0d1117",
         color: "white"
     };
 
@@ -18,12 +18,28 @@ function App() {
     return (
         <div className="page" style={theme ? lightTheme : darkTheme}>
             <img
-                src="images/moon.png"
+                src="images/sunP.png"
                 onClick={handleThemeChange}
-                className="moon"
+                className="sun"
             />
         </div>
     );
+}
+
+function Moon({ handleThemeChange }) {
+    <img
+        src="images/moon.png"
+        onClick={handleThemeChange}
+        className="moon"
+    />
+}
+
+function Sun({ handleThemeChange }) {
+    <img
+        src="images/sunP.png"
+        onClick={handleThemeChange}
+        className="sun"
+    />
 }
 
 // react & react DOM stuff

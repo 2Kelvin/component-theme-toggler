@@ -12,7 +12,7 @@ function App() {
     };
 
     var darkTheme = {
-        backgroundColor: "black",
+        backgroundColor: "#0d1117",
         color: "white"
     };
 
@@ -24,11 +24,31 @@ function App() {
         "div",
         { className: "page", style: theme ? lightTheme : darkTheme },
         React.createElement("img", {
-            src: "images/moon.png",
+            src: "images/sunP.png",
             onClick: handleThemeChange,
-            className: "moon"
+            className: "sun"
         })
     );
+}
+
+function Moon(_ref) {
+    var handleThemeChange = _ref.handleThemeChange;
+
+    React.createElement("img", {
+        src: "images/moon.png",
+        onClick: handleThemeChange,
+        className: "moon"
+    });
+}
+
+function Sun(_ref2) {
+    var handleThemeChange = _ref2.handleThemeChange;
+
+    React.createElement("img", {
+        src: "images/sunP.png",
+        onClick: handleThemeChange,
+        className: "sun"
+    });
 }
 
 // react & react DOM stuff
