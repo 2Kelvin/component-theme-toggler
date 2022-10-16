@@ -6,7 +6,7 @@ function App() {
         theme = _React$useState2[0],
         setTheme = _React$useState2[1];
 
-    var _React$useState3 = React.useState(React.createElement(Moon, { handleThemeChange: handleThemeChange })),
+    var _React$useState3 = React.useState(React.createElement(Moon, null)),
         _React$useState4 = _slicedToArray(_React$useState3, 2),
         icon = _React$useState4[0],
         setIcon = _React$useState4[1];

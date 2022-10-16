@@ -1,6 +1,6 @@
 function App() {
     const [theme, setTheme] = React.useState(lightTheme);
-    const [icon, setIcon] = React.useState(<Moon handleThemeChange={handleThemeChange} />);
+    const [icon, setIcon] = React.useState(<Moon />);
 
     const lightTheme = {
         backgroundColor: "white",

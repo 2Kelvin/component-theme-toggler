@@ -7,9 +7,13 @@ body {
 .page {
     height: 100vh;
     width: 100vw;
+    display: grid;
+    place-content: center;
 }
 
 .moon,
 .sun {
     cursor: pointer;
+    height: 100px;
+    width: 100px;
 }
