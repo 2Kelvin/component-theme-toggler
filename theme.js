@@ -15,8 +15,23 @@ function App() {
         backgroundColor: "black",
         color: "white"
     };
+
+    function handleThemeChange() {
+        setTheme(!theme);
+    }
+
+    return React.createElement(
+        "div",
+        { className: "page", style: theme ? lightTheme : darkTheme },
+        React.createElement("img", {
+            src: "images/moon.png",
+            onClick: handleThemeChange,
+            className: "moon"
+        })
+    );
 }
 
+// react & react DOM stuff
 var reactContainer = document.getElementById("root");
 var root = ReactDOM.createRoot(reactContainer);
 root.render(React.createElement(App, null));

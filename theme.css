@@ -4,8 +4,11 @@ body {
     box-sizing: border-box;
 }
 
-#root {
+.page {
     height: 100vh;
     width: 100vw;
-    background-color: violet;
+}
+
+.moon {
+    cursor: pointer;
 }
